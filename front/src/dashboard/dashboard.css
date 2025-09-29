@@ -78,6 +78,11 @@ body {
   animation: bgFlow 6s linear infinite;
 }
 
+.bg-main--paused::before,
+.bg-main--paused::after {
+  animation-play-state: paused;
+}
+
 .cloud {
   width: 100%;
 }

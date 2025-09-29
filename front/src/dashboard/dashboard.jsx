@@ -19,7 +19,7 @@ const Dashboard = () => {
     <>
       <div className="dashboard">
         <Header />
-        <div className={`bg-main${isFlowing ? " bg-main--flow" : ""}`}>
+        <div className={`bg-main bg-main--flow${isFlowing ? "" : " bg-main--paused"}`}>
           
         </div>
         <div className="stars">
