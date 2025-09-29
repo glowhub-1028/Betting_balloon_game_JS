@@ -7,8 +7,12 @@ import Footer from "../component/footer/footer";
 const Dashboard = () => {
   const [isFlowing, setIsFlowing] = useState(false);
 
-  const handleHeat = useCallback(() => {
-    setIsFlowing((prev) => !prev);
+  const handleHeatStart = useCallback(() => {
+    setIsFlowing(true);
+  }, []);
+
+  const handleHeatEnd = useCallback(() => {
+    setIsFlowing(false);
   }, []);
 
   return (
@@ -24,7 +28,7 @@ const Dashboard = () => {
         </div>
         <img className="cloud" src="/image/clouds.png" />
         <img className="bg-img" src="/image/location3.png" />
-        <Footer onHeat={handleHeat} />
+        <Footer onHeat={handleHeatStart} onHeatEnd={handleHeatEnd} />
       </div>
     </>
   );

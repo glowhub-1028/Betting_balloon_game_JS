@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 
-const Footer = ({ onHeat }) => {
+const Footer = ({ onHeat, onHeatEnd }) => {
   return (
     <>
       <div className="footer">
@@ -26,7 +26,14 @@ const Footer = ({ onHeat }) => {
           <button className="return">
             <img src="/image/icon-auto-play.4977be4170e6076b.svg" />
           </button>
-          <button className="heat" onClick={onHeat}>
+          <button
+            className="heat"
+            onMouseDown={onHeat}
+            onMouseUp={onHeatEnd}
+            onMouseLeave={onHeatEnd}
+            onTouchStart={onHeat}
+            onTouchEnd={onHeatEnd}
+          >
             <img src="/image/icon-balloon-fire.svg"/>
             HEAT
           </button>
