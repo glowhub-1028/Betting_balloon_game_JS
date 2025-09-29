@@ -15,11 +15,13 @@ const Dashboard = () => {
     setIsFlowing(false);
   }, []);
 
+    
+
   return (
     <>
       <div className="dashboard">
         <Header />
-        <div className={`bg-main bg-main--flow${isFlowing ? "" : " bg-main--paused"}`}>
+        <div className={`bg-main${isFlowing ? " bg-main--flow" : ""}`}>
           
         </div>
         <div className="stars">
