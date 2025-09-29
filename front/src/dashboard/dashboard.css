@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.dashboard {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 960px;
+  max-height: 540px;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(#98c5b9 25%, #f4d690, #fdeebb);
+}
+
+.bg-main {
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform: translate(0px, 0px);
+  top: auto;
+  left: 0;
+  bottom: 195px;
+  width: 100%;
+  height: 4377px;
+  --backgroundMainBotColor: #f4d690;
+}
+
+.bg-main::before {
+  bottom: 10px;
+  background-color: var(--backgroundMainBotColor);
+  transform: translateY(100%);
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-main::after {
+  top: 0;
+  background-image: linear-gradient(
+    180deg,
+    #022059 0.13%,
+    #24afed 83.13%,
+    var(--backgroundMainBotColor) 100.13%
+  );
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Flow animation when heating */
+@keyframes bgFlow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-60%);
+  }
+}
+
+.bg-main--flow::after {
+  animation: bgFlow 6s linear infinite;
+}
+
+.bg-main--flow::before {
+  animation: bgFlow 6s linear infinite;
+}
+
+.cloud {
+  width: 100%;
+}
+
+.stars {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 200%;
+  transform: translateY(0);
+}
+
+.star {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  /* background-image: url(/assets/img/balloon/stars.png);
+    background-image: -webkit-image-set(url(/assets/img/balloon/stars.png) 1x, url(/assets/img/balloon/stars@2x.png) 2x, url(/assets/img/balloon/stars@3x.png) 3x);
+    background-image: image-set("/assets/img/balloon/stars.png" 1x, "/assets/img/balloon/stars@2x.png" 2x, "/assets/img/balloon/stars@3x.png" 3x); */
+  background-repeat: repeat;
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+.stars .star:nth-child(2) {
+  top: 50%;
+}
+
+@media only screen and (max-width: 960px) {
+  .bg-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .dashboard {
+    transform: none;
+    position: initial;
+    top: 0;
+    left: 0;
+    max-height: none;
+    background-image: linear-gradient(#98c5b9 3%, #f4d690, #fdeebb);
+  }
+
+  .bg-img {
+    top: 50vh;
+  }
+
+  .cloud {
+    margin-top: 20vh;
+  }
+}
