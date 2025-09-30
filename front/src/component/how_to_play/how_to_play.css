@@ -1,0 +1,20 @@
+.how_to_play {
+  
+}
+
+.modal_content {
+  border-radius: 12px;
+  background: #212226;
+  border-color: #1b1b1b;
+  box-shadow: 0 1rem 3rem #0000004d !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}

@@ -1,0 +1,197 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #0000005c;
+  display: grid;
+  grid-template-areas: "control-panel button-group";
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.footer .control-panel {
+  grid-area: control-panel;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 300px;
+  height: 50px;
+  background-color: #06378f !important;
+  border: 1px solid rgba(0, 0, 0, 0.53);
+  box-shadow: inset 1px 1px #fff1cd33;
+  border-radius: 30px;
+}
+
+.footer .control-panel .left {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+}
+
+.footer .control-panel .left .input-label {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: white;
+  margin: -2px;
+}
+
+.footer .control-panel .left input {
+  text-align: center;
+  width: 142px;
+  height: 22px;
+  border-radius: 11px;
+  border: solid 1px rgba(0, 0, 0, 0.6);
+  background-color: #0000004d;
+}
+
+.footer .control-panel .right {
+  grid-area: button-group;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer .control-panel .right button {
+  background-color: #06378f;
+  cursor: pointer;
+  color: #fff;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-color: #00000026;
+  box-shadow: inset 1px 1px #fff1cd33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.footer .control-panel .right .minus,
+.footer .control-panel .right .plus {
+  width: 34px;
+  height: 30px;
+}
+
+.footer .control-panel .right .coin {
+  width: 38px;
+  height: 36px;
+}
+
+.footer .button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer .button-group .return {
+  background-image: radial-gradient(circle at 50% 50%, #0576dc, #025cd5 68%);
+  color: #fff;
+  max-width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.footer .button-group .heat {
+  position: relative;
+  background-image: radial-gradient(circle at 50% 50%, #61a503, #2d7500 94%);
+  width: 140px;
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  box-shadow: 3px 3px 6px #021a0880, 0 0 30px #f79415, inset 1px 1px #fff1cd33,
+    inset -1px -1px #00000052;
+}
+
+.footer .button-group .heat img {
+  position: absolute;
+  left: 10px;
+}
+
+.footer .button-group .take {
+  background-image: radial-gradient(
+    44% 44% at 49.36% 52%,
+    #dba355 0%,
+    #c4872e 100%
+  );
+  width: 90px;
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.footer .button-group button {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 6px #020b1a80, inset -1px -1px #00000052,
+    inset 1px 1px #fff1cd33;
+  border: 2px solid rgba(0, 0, 0, 0.9);
+}
+
+@media only screen and (max-width: 768px) {
+  .bg-main{
+    bottom: 500px;
+  }
+
+
+  .bg-main::after {
+
+  }
+
+  .footer {
+    grid-template-areas:
+      "button-group button-group"
+      "control-panel control-panel";
+    bottom: 32px;
+  }
+
+  .control-panel {
+    margin-top: 15px !important;
+  }
+
+  .footer .control-panel {
+    margin: auto;
+  }
+
+  .header {
+    top: auto;
+    bottom: 0;
+    background-color: #00000000;
+  }
+
+  .left-btn-group .how-to-play div {
+    display: none;
+  }
+
+  .left-btn-group .how-to-play {
+    width: auto;
+  }
+
+  .left-btn-group .how-to-play .question-icon {
+    left: 0;
+  }
+
+  .left-btn-group {
+    gap: 5px;
+  }
+
+  .left-btn-group .how-to-play .question-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
