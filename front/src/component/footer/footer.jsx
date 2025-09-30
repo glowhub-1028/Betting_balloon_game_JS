@@ -1,14 +1,14 @@
 import React from "react";
 import "./footer.css";
 
-const Footer = ({ onHeat, onHeatEnd }) => {
+const Footer = ({ onHeat  , onHeatEnd }) => {
   return (
     <>
       <div className="footer">
         <div className="control-panel">
           <div className="left">
             <div className="input-label">Bet USD</div>
-            <input type="text" value={0.30}/>
+            <input type="text" value={0.3} />
           </div>
           <div className="right">
             <button className="minus">
@@ -34,7 +34,7 @@ const Footer = ({ onHeat, onHeatEnd }) => {
             onTouchStart={onHeat}
             onTouchEnd={onHeatEnd}
           >
-            <img src="/image/icon-balloon-fire.svg"/>
+            <img src="/image/icon-balloon-fire.svg" />
             HEAT
           </button>
           <button className="take">

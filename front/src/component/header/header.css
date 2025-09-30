@@ -1,0 +1,111 @@
+.header {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #0000005c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  border-radius: 12px;
+  z-index: 100;
+}
+
+.left-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.left-btn-group .ballon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 24px;
+  cursor: pointer;
+  color: #fff;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-color: #06378f;
+  box-shadow: inset 1.5px 1.5px #fff1cd33;
+  font-size: 12px;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.left-btn-group .ballon .arrow-down {
+  position: absolute;
+  right: 8px;
+  width: 10px;
+}
+
+.left-btn-group .how-to-play {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 22px;
+  border-radius: 17px;
+  border-color: #ffffff00;
+  background-image: linear-gradient(to bottom, #f9a119, #f38410);
+  font-size: 12px;
+  font-family: sans-serif;
+  outline: none;
+  color: #531707;
+}
+
+.left-btn-group .how-to-play .question-icon {
+  position: absolute;
+  left: 2px;
+}
+
+.right-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.right-btn-group .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  color: #fff;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-color: #06378f;
+  box-shadow: inset 1.5px 1.5px #fff1cd33;
+  font-size: 12px;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.right-btn-group .menu .icon {
+  width: 10px;
+  height: 1px;
+  background-color: white;
+}
+
+.right-btn-group .menu .center {
+  margin: 2px 0;
+}
+
+.right-btn-group .price strong {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.right-btn-group .price {
+  font-size: 12px;
+  font-family: sans-serif;
+  color: #FFFFFF80;
+}
