@@ -33,6 +33,12 @@ const Dashboard = () => {
             <div className="balloon_red_fire"></div>
             <img src="/image/airballoon-red.png" alt="" className="balloon" />
           </div>
+          <div className = "coefficient">
+            <span className = "coefficient_main">
+              0.00
+              </span>
+          </div>
+
           <Footer onHeat={handleHeatStart} onHeatEnd={handleHeatEnd} />
         </div>
       {/* </main> */}
