@@ -304,3 +304,39 @@ body {
   width: 100%;
   height: 314px;
 }
+
+.coefficient {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+}
+
+.coefficient_main {
+  color: rgb(255, 255, 255);
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform: translate(0px, 0px);
+  opacity: 1;
+  display: flex;
+  align-items: baseline;
+  font-weight: 700;
+  line-height: 1.1666666667;
+}
+
+.coefficient_main::after {
+  content: "X";
+  font-size: 32px;
+
+}
