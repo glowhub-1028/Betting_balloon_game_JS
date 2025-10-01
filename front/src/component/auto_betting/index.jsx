@@ -144,57 +144,72 @@ export default function AutoBetting({ open = true, onClose }) {
             </div>
 
             <div className="ab-section">
-              <div className="ab-subtitle">If I lost</div>
-              <div className="ab-select">
-                <RadioPill active={lossMode === lossModes[0]} onClick={() => setLossMode(lossModes[0])}>{lossModes[0]}</RadioPill>
-              </div>
-              <div className="ab-split">
-                <RadioPill active={lossMode === lossModes[1]} onClick={() => setLossMode(lossModes[1])}>Increase bet by</RadioPill>
-                <PercentageControl
-                  prefix=""
-                  value={lossPercent}
-                  onChange={setLossPercent}
-                  active={lossMode === lossModes[1]}
-                  onActivate={() => setLossMode(lossModes[1])}
-                />
-              </div>
-              <div className="ab-split">
-                <RadioPill active={lossMode === lossModes[2]} onClick={() => setLossMode(lossModes[2])}>Decrease bet by</RadioPill>
-                <PercentageControl
-                  prefix=""
-                  value={lossPercent}
-                  onChange={setLossPercent}
-                  active={lossMode === lossModes[2]}
-                  onActivate={() => setLossMode(lossModes[2])}
-                />
+              <div className="bet-control-panel">
+                <div className="bet-control-panel-title">If I lost</div>
+                <div className="bet-control-panel-header">
+                  <div className="circle"></div>
+                  <div className="content">Return to initial bet</div>
+                </div>
+                <div className="bet-control-panel-body">
+                  <div className="bet-control-panel-body-left">
+                    <div className="circle"></div>
+                    <div className="increase-block">
+                      <h6>Increase bet by</h6>
+                      <div className="tool">
+                        <button className="minus-btn">-</button>
+                        <input value={`${0}%`} />
+                        <button className="plus-btn">+</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bet-control-panel-body-right">
+                    <div className="circle"></div>
+                    <div className="increase-block">
+                      <h6>Decrease bet by</h6>
+                      <div className="tool">
+                        <button className="minus-btn">-</button>
+                        <input value={`${0}%`} />
+                        <button className="plus-btn">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div className="ab-section">
-              <div className="ab-subtitle">If I win</div>
-              <div className="ab-select">
-                <RadioPill active={winMode === winModes[0]} onClick={() => setWinMode(winModes[0])}>{winModes[0]}</RadioPill>
+              <div className="bet-control-panel">
+                <div className="bet-control-panel-title">If I win</div>
+                <div className="bet-control-panel-header">
+                  <div className="circle"></div>
+                  <div className="content">Return to initial bet</div>
+                </div>
+                <div className="bet-control-panel-body">
+                  <div className="bet-control-panel-body-left">
+                    <div className="circle"></div>
+                    <div className="increase-block">
+                      <h6>Increase bet by</h6>
+                      <div className="tool">
+                        <button className="minus-btn">-</button>
+                        <input value={`${0}%`} />
+                        <button className="plus-btn">+</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bet-control-panel-body-right">
+                    <div className="circle"></div>
+                    <div className="increase-block">
+                      <h6>Decrease bet by</h6>
+                      <div className="tool">
+                        <button className="minus-btn">-</button>
+                        <input value={`${0}%`} />
+                        <button className="plus-btn">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="ab-split">
-                <RadioPill active={winMode === winModes[1]} onClick={() => setWinMode(winModes[1])}>Increase bet by</RadioPill>
-                <PercentageControl
-                  prefix=""
-                  value={winPercent}
-                  onChange={setWinPercent}
-                  active={winMode === winModes[1]}
-                  onActivate={() => setWinMode(winModes[1])}
-                />
-              </div>
-              <div className="ab-split">
-                <RadioPill active={winMode === winModes[2]} onClick={() => setWinMode(winModes[2])}>Decrease bet by</RadioPill>
-                <PercentageControl
-                  prefix=""
-                  value={winPercent}
-                  onChange={setWinPercent}
-                  active={winMode === winModes[2]}
-                  onActivate={() => setWinMode(winModes[2])}
-                />
-              </div>
+
             </div>
           </div>
         )}
