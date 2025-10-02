@@ -1,30 +1,23 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import "./dashboard.css";
 
 import Header from "../component/header/header";
 import Footer from "../component/footer/footer";
+import { useGame } from "../hooks/useGame";
 
 const Dashboard = () => {
-  const [isFlowing, setIsFlowing] = useState(false);
-
-  const handleHeatStart = useCallback(() => {
-    setIsFlowing(true);
-  }, []);
-
-  const handleHeatEnd = useCallback(() => {
-    setIsFlowing(false);
-  }, []);
+  const { isFlowing, coefficient, animationKey } = useGame();
 
   return (
     <>
       {/* <main className = "main_window"> */}
         <div className="dashboard">
           <Header />
-          <div className="background">
+          <div className="background" key={animationKey}>
             <div className={`bg-main${isFlowing ? " bg-main--flow" : ""}`}></div>
             <div className="stars">
-              <img className="star" src="/image/stars.png" alt="star" srcset="" />
-              <img className="star" src="/image/stars.png" alt="star" srcset="" />
+              <img className="star" src="/image/stars.png" alt="star" srcSet="" />
+              <img className="star" src="/image/stars.png" alt="star" srcSet="" />
             </div>
             <img className="cloud" src="/image/clouds.png" />
             <img className="bg-img" src="/image/location3.png" />
@@ -35,11 +28,11 @@ const Dashboard = () => {
           </div>
           <div className = "coefficient">
             <span className = "coefficient_main">
-              0.00
+              {coefficient.toFixed(2)}
               </span>
           </div>
 
-          <Footer onHeat={handleHeatStart} onHeatEnd={handleHeatEnd} />
+          <Footer />
         </div>
       {/* </main> */}
     </>

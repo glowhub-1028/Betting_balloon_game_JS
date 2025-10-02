@@ -1,0 +1,134 @@
+.bet-selector-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.bet-selector-modal {
+  /* background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #ec4899 100%);
+  border-radius: 16px;
+  padding: 24px;
+  width: 320px;
+  max-width: 90vw;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1); */
+
+  width: 300px;
+  top: -7px !important;
+  left: -80px !important;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  flex-wrap: wrap;
+  background: #061f52;
+  border-color: #0e1c23;
+  color: #c6cce0;
+  border-radius: 8px !important;
+}
+
+.bet-selector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.bet-selector-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bet-selector-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.bet-option {
+  /* background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+
+  width: 100%;
+    height: 26px;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.bet-option:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bet-option.selected {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  border-color: #34d399;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.3);
+}
+
+.bet-option:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Special styling for the last item (100.00) to span both columns */
+.bet-option:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Mobile responsiveness */
+/* @media (max-width: 480px) {
+  .bet-selector-modal {
+    width: 280px;
+    padding: 20px;
+  }
+
+  .bet-option {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .bet-selector-header h3 {
+    font-size: 18px;
+  }
+} */

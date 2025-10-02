@@ -1,6 +1,9 @@
 import React from "react";
 import "./header.css";
+import { useGame } from "../../hooks/useGame";
+
 const Header = () => {
+  const { balance } = useGame();
   return (
     <>
       <div className="header">
@@ -16,7 +19,7 @@ const Header = () => {
         </div>
         <div className="right-btn-group">
           <span className="price">
-            <strong>3,000,00</strong> USD
+            <strong>{balance.toFixed(2)}</strong> USD
           </span>
           <button className="menu">
             <div>
